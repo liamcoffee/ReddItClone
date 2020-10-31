@@ -24,6 +24,7 @@ export class PostResolver {
 	): Promise<Post | null> {
 		const post = em.create(Post, { title });
 		await em.persistAndFlush(post);
+		console.log(`inserye the psot`, post);
 		return post;
 	}
 
